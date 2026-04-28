@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmlns:umlvmprofile="pathmap://UML_PROFILES/uml-vm-profile.profile.uml" xsi:schemaLocation="pathmap://UML_PROFILES/uml-vm-profile.profile.uml pathmap://model/uml-vm-profile/uml-vm-profile.profile.uml#_XJZvsJOyEfCDfaGUJJSFbQ">
+  <uml:Model xmi:id="_6HFQIEHxEfGVkPM0FobjkQ" name="UltramyJago">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_6Ie-UEHxEfGVkPM0FobjkQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8qyjAEHxEfGVkPM0FobjkQ" name="BeritaBoardVM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DBQ84EHyEfGVkPM0FobjkQ" name="MBeritaBoard">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_KzaqkEHyEfGVkPM0FobjkQ" name="BeritaBoard"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_QuLY0EHyEfGVkPM0FobjkQ" name="BeritaBoardImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TftsUEHyEfGVkPM0FobjkQ" name="beritaid" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_bBusQEHyEfGVkPM0FobjkQ" name="content" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yZCw8EHyEfGVkPM0FobjkQ" client="_QuLY0EHyEfGVkPM0FobjkQ" supplier="_KzaqkEHyEfGVkPM0FobjkQ" contract="_KzaqkEHyEfGVkPM0FobjkQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_HALZ8EIoEfGjcr_fAw5DGQ" name="DFansramy">
+        <packagedElement xmi:type="uml:Class" xmi:id="_SrbgIEIoEfGjcr_fAw5DGQ" name="BeritaBoardImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_e-FkkkIoEfGjcr_fAw5DGQ" name="beritaboardimpl" type="_QuLY0EHyEfGVkPM0FobjkQ" association="_e-EWcEIoEfGjcr_fAw5DGQ"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_e-EWcEIoEfGjcr_fAw5DGQ" memberEnd="_e-FkkkIoEfGjcr_fAw5DGQ _e-GLokIoEfGjcr_fAw5DGQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_e-FkkEIoEfGjcr_fAw5DGQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e-FkkUIoEfGjcr_fAw5DGQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_e-GLokIoEfGjcr_fAw5DGQ" name="beritaboardimpl" type="_SrbgIEIoEfGjcr_fAw5DGQ" association="_e-EWcEIoEfGjcr_fAw5DGQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_E_CpwEMGEfGhIbrletiVzQ" name="TaskManagementVM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_JFrvAEMGEfGhIbrletiVzQ" name="MTaskManagement">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_m_0AcEMGEfGhIbrletiVzQ" name="TaskManagement"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rYwWoEMGEfGhIbrletiVzQ" name="TaskManagementImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_U1S7UEMHEfGhIbrletiVzQ" name="idTask" visibility="protected" aggregation="shared">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ajtPoEMHEfGhIbrletiVzQ" name="title" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_gEQuIEMHEfGhIbrletiVzQ" name="description" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_jpZBwEMHEfGhIbrletiVzQ" name="status" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_J2Qa4EMHEfGhIbrletiVzQ" client="_rYwWoEMGEfGhIbrletiVzQ" supplier="_m_0AcEMGEfGhIbrletiVzQ" contract="_m_0AcEMGEfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_SwK3UEMGEfGhIbrletiVzQ" name="DTaskDelta">
+        <packagedElement xmi:type="uml:Class" xmi:id="_BIic0EMHEfGhIbrletiVzQ" name="TaskManagementImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_NXtvckMHEfGhIbrletiVzQ" name="taskmanagementimpl" type="_rYwWoEMGEfGhIbrletiVzQ" association="_NXtIYEMHEfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_NXtIYEMHEfGhIbrletiVzQ" memberEnd="_NXtvckMHEfGhIbrletiVzQ _NXtvdUMHEfGhIbrletiVzQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NXtvcEMHEfGhIbrletiVzQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NXtvcUMHEfGhIbrletiVzQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_NXtvdUMHEfGhIbrletiVzQ" name="taskmanagementimpl" type="_BIic0EMHEfGhIbrletiVzQ" association="_NXtIYEMHEfGhIbrletiVzQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cyp2oEMLEfGhIbrletiVzQ" memberEnd="_cyp2o0MLEfGhIbrletiVzQ _cyqdskMLEfGhIbrletiVzQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cyp2oUMLEfGhIbrletiVzQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cyp2okMLEfGhIbrletiVzQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cyqdskMLEfGhIbrletiVzQ" name="projectimpl" type="_YBDv4EMLEfGhIbrletiVzQ" association="_cyp2oEMLEfGhIbrletiVzQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_K2EN4EMOEfGhIbrletiVzQ" name="ProjectVM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_qMG18EMJEfGhIbrletiVzQ" name="MProject">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_GIeaMEMKEfGhIbrletiVzQ" name="Project"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_JGXHoEMKEfGhIbrletiVzQ" name="ProjectImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Q0IroEMKEfGhIbrletiVzQ" name="idProject" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Zs5cEEMKEfGhIbrletiVzQ" name="name" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dhUv8EMKEfGhIbrletiVzQ" name="description" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PNrEIEMKEfGhIbrletiVzQ" client="_JGXHoEMKEfGhIbrletiVzQ" supplier="_GIeaMEMKEfGhIbrletiVzQ" contract="_GIeaMEMKEfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_SXBlQEMLEfGhIbrletiVzQ" name="DProjectDelta">
+        <packagedElement xmi:type="uml:Class" xmi:id="_YBDv4EMLEfGhIbrletiVzQ" name="ProjectImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_cyp2o0MLEfGhIbrletiVzQ" name="projectimpl" type="_JGXHoEMKEfGhIbrletiVzQ" association="_cyp2oEMLEfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-VRKUEMOEfGhIbrletiVzQ" name="MeetingManagementVM">
+      <packagedElement xmi:type="uml:Package" xmi:id="__EQ-UEMOEfGhIbrletiVzQ" name="MMeetingManagement">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_IZm9EEMPEfGhIbrletiVzQ" name="MeetingManagement"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LJDl4EMPEfGhIbrletiVzQ" name="MeetingManagementImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pY_IMEMPEfGhIbrletiVzQ" name="idMeeting" visibility="protected" aggregation="composite">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_4EQCwEMPEfGhIbrletiVzQ" name="name" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_977n0EMPEfGhIbrletiVzQ" name="startDate" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_B6iLYEMQEfGhIbrletiVzQ" name="endDate" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_FCmvkEMQEfGhIbrletiVzQ" name="location" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_brhSoEMPEfGhIbrletiVzQ" client="_LJDl4EMPEfGhIbrletiVzQ" supplier="_IZm9EEMPEfGhIbrletiVzQ" contract="_IZm9EEMPEfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_QlkR4EMPEfGhIbrletiVzQ" name="DMeetingDelta">
+        <packagedElement xmi:type="uml:Class" xmi:id="_S33rsEMPEfGhIbrletiVzQ" name="MeetingManagementImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dEeCkkMPEfGhIbrletiVzQ" name="meetingmanagementimpl" type="_LJDl4EMPEfGhIbrletiVzQ" association="_dEdbgEMPEfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_dEdbgEMPEfGhIbrletiVzQ" memberEnd="_dEeCkkMPEfGhIbrletiVzQ _dEeClUMPEfGhIbrletiVzQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dEeCkEMPEfGhIbrletiVzQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dEeCkUMPEfGhIbrletiVzQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_dEeClUMPEfGhIbrletiVzQ" name="meetingmanagementimpl" type="_S33rsEMPEfGhIbrletiVzQ" association="_dEdbgEMPEfGhIbrletiVzQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Nrep4EMQEfGhIbrletiVzQ" name="ReminderVM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_RC7G0EMQEfGhIbrletiVzQ" name="MReminder">
+        <packagedElement xmi:type="uml:Class" xmi:id="_XQVEQEMQEfGhIbrletiVzQ" name="ReminderImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_mUg1IEMQEfGhIbrletiVzQ" name="idReminder" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rJCUEEMQEfGhIbrletiVzQ" name="isDisabled" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_vKk24EMQEfGhIbrletiVzQ" name="resendIntervalMin" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y4HfoEMQEfGhIbrletiVzQ" name="timeTrigger" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_j2JVQEMQEfGhIbrletiVzQ" client="_XQVEQEMQEfGhIbrletiVzQ" supplier="_ZQflMEMQEfGhIbrletiVzQ" contract="_ZQflMEMQEfGhIbrletiVzQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_ZQflMEMQEfGhIbrletiVzQ" name="Reminder"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TNhWIEMQEfGhIbrletiVzQ" name="DReminderDelta">
+        <packagedElement xmi:type="uml:Class" xmi:id="_WFwukEMQEfGhIbrletiVzQ" name="ReminderImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_fnEsw0MQEfGhIbrletiVzQ" name="reminderimpl" type="_XQVEQEMQEfGhIbrletiVzQ" association="_fnEswEMQEfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fnEswEMQEfGhIbrletiVzQ" memberEnd="_fnEsw0MQEfGhIbrletiVzQ _fnF64kMQEfGhIbrletiVzQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fnEswUMQEfGhIbrletiVzQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fnEswkMQEfGhIbrletiVzQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_fnF64kMQEfGhIbrletiVzQ" name="reminderimpl" type="_WFwukEMQEfGhIbrletiVzQ" association="_fnEswEMQEfGhIbrletiVzQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6NWAwEMQEfGhIbrletiVzQ" name="LabelVM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_9tgU0EMQEfGhIbrletiVzQ" name="MLabel">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DuYSIEMREfGhIbrletiVzQ" name="Label"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_GIjOgEMREfGhIbrletiVzQ" name="LabelImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Y31_MEMREfGhIbrletiVzQ" name="idLabel" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_edjDcEMREfGhIbrletiVzQ" name="name" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_hVs8UEMREfGhIbrletiVzQ" name="description" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_KJIIAEMREfGhIbrletiVzQ" client="_GIjOgEMREfGhIbrletiVzQ" supplier="_DuYSIEMREfGhIbrletiVzQ" contract="_DuYSIEMREfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="__T_KcEMQEfGhIbrletiVzQ" name="DLabelDelta">
+        <packagedElement xmi:type="uml:Class" xmi:id="_HW0YcEMREfGhIbrletiVzQ" name="LabelImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_K6FD0kMREfGhIbrletiVzQ" name="labelimpl" type="_GIjOgEMREfGhIbrletiVzQ" association="_K6EcwEMREfGhIbrletiVzQ"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_K6EcwEMREfGhIbrletiVzQ" memberEnd="_K6FD0kMREfGhIbrletiVzQ _K6Fq4kMREfGhIbrletiVzQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_K6FD0EMREfGhIbrletiVzQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K6FD0UMREfGhIbrletiVzQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_K6Fq4kMREfGhIbrletiVzQ" name="labelimpl" type="_HW0YcEMREfGhIbrletiVzQ" association="_K6EcwEMREfGhIbrletiVzQ"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6IEHkEHxEfGVkPM0FobjkQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6IEuoEHxEfGVkPM0FobjkQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6IEuoUHxEfGVkPM0FobjkQ" key="Version" value="0.0.5"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6IEuokHxEfGVkPM0FobjkQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6IEuo0HxEfGVkPM0FobjkQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6IEupEHxEfGVkPM0FobjkQ" key="Date" value="2025-09-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6IEupUHxEfGVkPM0FobjkQ" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6IEHkUHxEfGVkPM0FobjkQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://model/uml-vm-profile/uml-vm-profile.profile.uml#_XJZvsJOyEfCDfaGUJJSFbQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://model/uml-vm-profile/uml-vm-profile.profile.uml#_XI61gJkHEeyPP7xacetQkQ"/>
+    </profileApplication>
+  </uml:Model>
+  <umlvmprofile:vm xmi:id="_BYAgEEHyEfGVkPM0FobjkQ" base_Package="_8qyjAEHxEfGVkPM0FobjkQ"/>
+  <umlvmprofile:module xmi:id="_Fgta0EHyEfGVkPM0FobjkQ" base_Package="_DBQ84EHyEfGVkPM0FobjkQ"/>
+  <umlvmprofile:pk xmi:id="_ZcxgoEHyEfGVkPM0FobjkQ" base_Property="_TftsUEHyEfGVkPM0FobjkQ"/>
+  <umlvmprofile:delta xmi:id="_d17CoEIoEfGjcr_fAw5DGQ" base_Package="_HALZ8EIoEfGjcr_fAw5DGQ"/>
+  <umlvmprofile:modifies xmi:id="_jwdHYEIoEfGjcr_fAw5DGQ" base_Association="_e-EWcEIoEfGjcr_fAw5DGQ"/>
+  <umlvmprofile:modifiedClass xmi:id="_n5CGUEIoEfGjcr_fAw5DGQ" base_Class="_SrbgIEIoEfGjcr_fAw5DGQ"/>
+  <umlvmprofile:vm xmi:id="_ImQBAEMGEfGhIbrletiVzQ" base_Package="_E_CpwEMGEfGhIbrletiVzQ"/>
+  <umlvmprofile:module xmi:id="_RwEsQEMGEfGhIbrletiVzQ" base_Package="_JFrvAEMGEfGhIbrletiVzQ"/>
+  <umlvmprofile:delta xmi:id="_XZpj4EMGEfGhIbrletiVzQ" base_Package="_SwK3UEMGEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifiedClass xmi:id="_E9Tu8EMHEfGhIbrletiVzQ" base_Class="_BIic0EMHEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifies xmi:id="_RzYpgEMHEfGhIbrletiVzQ" base_Association="_NXtIYEMHEfGhIbrletiVzQ"/>
+  <umlvmprofile:pk xmi:id="_V0aO8EMHEfGhIbrletiVzQ" base_Property="_U1S7UEMHEfGhIbrletiVzQ"/>
+  <umlvmprofile:module xmi:id="_EdBlAEMKEfGhIbrletiVzQ" base_Package="_qMG18EMJEfGhIbrletiVzQ"/>
+  <umlvmprofile:pk xmi:id="_Yed6EEMKEfGhIbrletiVzQ" base_Property="_Q0IroEMKEfGhIbrletiVzQ"/>
+  <umlvmprofile:delta xmi:id="_W0YhYEMLEfGhIbrletiVzQ" base_Package="_SXBlQEMLEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifiedClass xmi:id="_a7Oa8EMLEfGhIbrletiVzQ" base_Class="_YBDv4EMLEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifies xmi:id="_hvLbAEMLEfGhIbrletiVzQ" base_Association="_cyp2oEMLEfGhIbrletiVzQ"/>
+  <umlvmprofile:vm xmi:id="_NJx88EMOEfGhIbrletiVzQ" base_Package="_K2EN4EMOEfGhIbrletiVzQ"/>
+  <umlvmprofile:vm xmi:id="_FwZfIEMPEfGhIbrletiVzQ" base_Package="_-VRKUEMOEfGhIbrletiVzQ"/>
+  <umlvmprofile:delta xmi:id="_WQt20EMPEfGhIbrletiVzQ" base_Package="_QlkR4EMPEfGhIbrletiVzQ"/>
+  <umlvmprofile:module xmi:id="_XaW_cEMPEfGhIbrletiVzQ" base_Package="__EQ-UEMOEfGhIbrletiVzQ"/>
+  <umlvmprofile:vm xmi:id="_b-yXcEMQEfGhIbrletiVzQ" base_Package="_Nrep4EMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:module xmi:id="_dHRCcEMQEfGhIbrletiVzQ" base_Package="_RC7G0EMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:delta xmi:id="_eFwrAEMQEfGhIbrletiVzQ" base_Package="_TNhWIEMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifies xmi:id="_hxKlwEMQEfGhIbrletiVzQ" base_Association="_fnEswEMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifies xmi:id="_NB2ooEMREfGhIbrletiVzQ" base_Association="_K6EcwEMREfGhIbrletiVzQ"/>
+  <umlvmprofile:delta xmi:id="_O5Q2MEMREfGhIbrletiVzQ" base_Package="__T_KcEMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:module xmi:id="_P6MHsEMREfGhIbrletiVzQ" base_Package="_9tgU0EMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:vm xmi:id="_QtEWIEMREfGhIbrletiVzQ" base_Package="_6NWAwEMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifiedClass xmi:id="_S54L8EMREfGhIbrletiVzQ" base_Class="_S33rsEMPEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifiedClass xmi:id="_UOl8IEMREfGhIbrletiVzQ" base_Class="_WFwukEMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifiedClass xmi:id="_VMsjIEMREfGhIbrletiVzQ" base_Class="_HW0YcEMREfGhIbrletiVzQ"/>
+  <umlvmprofile:pk xmi:id="_cLpc0EMSEfGhIbrletiVzQ" base_Property="_pY_IMEMPEfGhIbrletiVzQ"/>
+  <umlvmprofile:pk xmi:id="_daICIEMSEfGhIbrletiVzQ" base_Property="_Y31_MEMREfGhIbrletiVzQ"/>
+  <umlvmprofile:pk xmi:id="_fV-q0EMSEfGhIbrletiVzQ" base_Property="_mUg1IEMQEfGhIbrletiVzQ"/>
+  <umlvmprofile:modifies xmi:id="_ppIVoEMSEfGhIbrletiVzQ" base_Association="_dEdbgEMPEfGhIbrletiVzQ"/>
+</xmi:XMI>
