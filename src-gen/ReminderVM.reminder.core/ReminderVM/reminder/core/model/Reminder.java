@@ -7,11 +7,13 @@ import java.lang.*;
 public interface Reminder {
 	    public int getIdReminder();
 	    public void setIdReminder(int idReminder);
-	    public String getIsDisabled();
-	    public void setIsDisabled(String isDisabled);
+	    public boolean getIsDisabled();
+	    public void setIsDisabled(boolean isDisabled);
 	    public int getResendIntervalMin();
 	    public void setResendIntervalMin(int resendIntervalMin);
-	    public String getTimeTrigger();
-	    public void setTimeTrigger(String timeTrigger);
+	    public int getHour();
+	    public void setHour(int hour);
+	    public int getMinute();
+	    public void setMinute(int minute);
 	HashMap<String, Object> toHashMap();
 }

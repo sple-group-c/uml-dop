@@ -17,9 +17,10 @@ import javax.persistence.Table;
 public abstract class ReminderComponent implements Reminder{
 	@Id
 	protected int idReminder; 
-	protected String isDisabled;
+	protected boolean isDisabled;
 	protected int resendIntervalMin;
-	protected String timeTrigger;
+	protected int hour;
+	protected int minute;
 	protected String objectName = ReminderComponent.class.getName();
 
 	public ReminderComponent() {
@@ -27,12 +28,13 @@ public abstract class ReminderComponent implements Reminder{
 	} 
 
 	public ReminderComponent(
-        int idReminder, String isDisabled, int resendIntervalMin, String timeTrigger
+        int idReminder, boolean isDisabled, int resendIntervalMin, int hour, int minute
     ) {
         this.idReminder = idReminder;
         this.isDisabled = isDisabled;
         this.resendIntervalMin = resendIntervalMin;
-        this.timeTrigger = timeTrigger;
+        this.hour = hour;
+        this.minute = minute;
     }
 
 	public int getIdReminder() {
@@ -42,11 +44,11 @@ public abstract class ReminderComponent implements Reminder{
 	public void setIdReminder(int idReminder) {
 		this.idReminder = idReminder;
 	}
-	public String getIsDisabled() {
+	public boolean getIsDisabled() {
 		return this.isDisabled;
 	}
 
-	public void setIsDisabled(String isDisabled) {
+	public void setIsDisabled(boolean isDisabled) {
 		this.isDisabled = isDisabled;
 	}
 	public int getResendIntervalMin() {
@@ -56,12 +58,19 @@ public abstract class ReminderComponent implements Reminder{
 	public void setResendIntervalMin(int resendIntervalMin) {
 		this.resendIntervalMin = resendIntervalMin;
 	}
-	public String getTimeTrigger() {
-		return this.timeTrigger;
+	public int getHour() {
+		return this.hour;
 	}
 
-	public void setTimeTrigger(String timeTrigger) {
-		this.timeTrigger = timeTrigger;
+	public void setHour(int hour) {
+		this.hour = hour;
+	}
+	public int getMinute() {
+		return this.minute;
+	}
+
+	public void setMinute(int minute) {
+		this.minute = minute;
 	}
  
 
@@ -71,7 +80,8 @@ public abstract class ReminderComponent implements Reminder{
             " idReminder='" + getIdReminder() + "'" +
             " isDisabled='" + getIsDisabled() + "'" +
             " resendIntervalMin='" + getResendIntervalMin() + "'" +
-            " timeTrigger='" + getTimeTrigger() + "'" +
+            " hour='" + getHour() + "'" +
+            " minute='" + getMinute() + "'" +
             "}";
     }
 	

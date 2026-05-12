@@ -19,19 +19,21 @@ import javax.persistence.OneToMany;
 @Table(name="reminder_impl")
 public class ReminderImpl extends ReminderComponent {
 
-	public ReminderImpl(int idReminder, String isDisabled, int resendIntervalMin, String timeTrigger) {
+	public ReminderImpl(int idReminder, boolean isDisabled, int resendIntervalMin, int hour, int minute) {
 		this.idReminder = idReminder;
 		this.isDisabled = isDisabled;
 		this.resendIntervalMin = resendIntervalMin;
-		this.timeTrigger = timeTrigger;
+		this.hour = hour;
+		this.minute = minute;
 	}
 
-	public ReminderImpl(String isDisabled, int resendIntervalMin, String timeTrigger) {
+	public ReminderImpl(boolean isDisabled, int resendIntervalMin, int hour, int minute) {
 		Random r = new Random();
 		this.idReminder = Math.abs(r.nextInt());
 		this.isDisabled = isDisabled;
 		this.resendIntervalMin = resendIntervalMin;
-		this.timeTrigger = timeTrigger;
+		this.hour = hour;
+		this.minute = minute;
 	}
 
 	public ReminderImpl() { }
@@ -43,11 +45,11 @@ public class ReminderImpl extends ReminderComponent {
 	public void setIdReminder(int idReminder) {
 		this.idReminder = idReminder;
 	}
-	public String getIsDisabled() {
+	public boolean getIsDisabled() {
 		return this.isDisabled;
 	}
 
-	public void setIsDisabled(String isDisabled) {
+	public void setIsDisabled(boolean isDisabled) {
 		this.isDisabled = isDisabled;
 	}
 	public int getResendIntervalMin() {
@@ -57,12 +59,19 @@ public class ReminderImpl extends ReminderComponent {
 	public void setResendIntervalMin(int resendIntervalMin) {
 		this.resendIntervalMin = resendIntervalMin;
 	}
-	public String getTimeTrigger() {
-		return this.timeTrigger;
+	public int getHour() {
+		return this.hour;
 	}
 
-	public void setTimeTrigger(String timeTrigger) {
-		this.timeTrigger = timeTrigger;
+	public void setHour(int hour) {
+		this.hour = hour;
+	}
+	public int getMinute() {
+		return this.minute;
+	}
+
+	public void setMinute(int minute) {
+		this.minute = minute;
 	}
 
 	
@@ -71,7 +80,8 @@ public class ReminderImpl extends ReminderComponent {
 		reminderMap.put("idReminder",getIdReminder());
 		reminderMap.put("isDisabled",getIsDisabled());
 		reminderMap.put("resendIntervalMin",getResendIntervalMin());
-		reminderMap.put("timeTrigger",getTimeTrigger());
+		reminderMap.put("hour",getHour());
+		reminderMap.put("minute",getMinute());
 
         return reminderMap;
     }

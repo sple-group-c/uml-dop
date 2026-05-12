@@ -23,27 +23,33 @@ import id.ac.ui.cs.prices.winvmj.auth.annotations.Restricted;
 public class ReminderServiceImpl extends ReminderServiceComponent{
 
     public Reminder createReminder(Map<String, Object> requestBody){
-		String isDisabled = (String) requestBody.get("isDisabled");
+		boolean isDisabled = (boolean) requestBody.get("isDisabled");
 		String resendIntervalMinStr = (String) requestBody.get("resendIntervalMin");
 		int resendIntervalMin = Integer.parseInt(resendIntervalMinStr);
-		String timeTrigger = (String) requestBody.get("timeTrigger");
+		String hourStr = (String) requestBody.get("hour");
+		int hour = Integer.parseInt(hourStr);
+		String minuteStr = (String) requestBody.get("minute");
+		int minute = Integer.parseInt(minuteStr);
 		
 		//to do: fix association attributes
 		
-		Reminder reminder = ReminderFactory.createReminder("ReminderVM.reminder.core.model.ReminderImpl", isDisabled, resendIntervalMin, timeTrigger);
+		Reminder reminder = ReminderFactory.createReminder("ReminderVM.reminder.core.model.ReminderImpl", isDisabled, resendIntervalMin, hour, minute);
 		Repository.saveObject(reminder);
 		return reminder;
 	}
 
 	public Reminder createReminder(Map<String, Object> requestBody, int id){
 		int idReminder = id;
-		String isDisabled = (String) requestBody.get("isDisabled");
+		boolean isDisabled = (boolean) requestBody.get("isDisabled");
 		String resendIntervalMinStr = (String) requestBody.get("resendIntervalMin");
 		int resendIntervalMin = Integer.parseInt(resendIntervalMinStr);
-		String timeTrigger = (String) requestBody.get("timeTrigger");
+		String hourStr = (String) requestBody.get("hour");
+		int hour = Integer.parseInt(hourStr);
+		String minuteStr = (String) requestBody.get("minute");
+		int minute = Integer.parseInt(minuteStr);
 		
 		//to do: fix association attributes
-		Reminder reminder = ReminderFactory.createReminder("ReminderVM.reminder.core.model.ReminderImpl",idReminder, isDisabled, resendIntervalMin, timeTrigger);
+		Reminder reminder = ReminderFactory.createReminder("ReminderVM.reminder.core.model.ReminderImpl",idReminder, isDisabled, resendIntervalMin, hour, minute);
 		Repository.saveObject(reminder);
 		return reminder;
 	}
@@ -57,7 +63,12 @@ public class ReminderServiceImpl extends ReminderServiceComponent{
 		String resendIntervalMinStr = (String) requestBody.get("resendIntervalMin");
 		reminder.setResendIntervalMin(Integer.parseInt(resendIntervalMinStr));
 		
-		reminder.setTimeTrigger((String) requestBody.get("timeTrigger"));
+		String hourStr = (String) requestBody.get("hour");
+		reminder.setHour(Integer.parseInt(hourStr));
+		
+		String minuteStr = (String) requestBody.get("minute");
+		reminder.setMinute(Integer.parseInt(minuteStr));
+		
 		
 		Repository.updateObject(reminder);
 		

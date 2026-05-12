@@ -1,8 +1,8 @@
-module ReminderVM.reminder.reminderdelta {
+module ReminderVM.reminder.inappnotification {
 	requires ReminderVM.reminder.core;
-	exports ReminderVM.reminder.reminderdelta.model;
-	exports ReminderVM.reminder.reminderdelta.resource;
-	exports ReminderVM.reminder.reminderdelta.service;
+	exports ReminderVM.reminder.inappnotification.model;
+	exports ReminderVM.reminder.inappnotification.resource;
+	exports ReminderVM.reminder.inappnotification.service;
 
 	requires id.ac.ui.cs.prices.winvmj.core;
 	requires id.ac.ui.cs.prices.winvmj.hibernate;
@@ -12,5 +12,5 @@ module ReminderVM.reminder.reminderdelta {
 	requires java.naming;
 	requires java.net.http;
 
-	opens ReminderVM.reminder.reminderdelta.model to org.hibernate.orm.core, gson, id.ac.ui.cs.prices.winvmj.hibernate;
+	opens ReminderVM.reminder.inappnotification.model to org.hibernate.orm.core, gson, id.ac.ui.cs.prices.winvmj.hibernate;
 }

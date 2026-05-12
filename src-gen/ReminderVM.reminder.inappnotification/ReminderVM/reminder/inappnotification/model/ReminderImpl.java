@@ -1,4 +1,4 @@
-package ReminderVM.reminder.reminderdelta.model;
+package ReminderVM.reminder.inappnotification.model;
 
 import java.util.*;
 import java.lang.*;
@@ -13,8 +13,8 @@ import ReminderVM.reminder.core.model.ReminderDecorator;
 import ReminderVM.reminder.core.model.Reminder;
 import ReminderVM.reminder.core.model.ReminderComponent;
 
-@Entity(name="reminder_reminderdelta")
-@Table(name="reminder_reminderdelta")
+@Entity(name="reminder_inappnotification")
+@Table(name="reminder_inappnotification")
 public class ReminderImpl extends ReminderDecorator {
 
 	public ReminderImpl() {

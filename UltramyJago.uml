@@ -124,24 +124,27 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Nrep4EMQEfGhIbrletiVzQ" name="ReminderVM">
       <packagedElement xmi:type="uml:Package" xmi:id="_RC7G0EMQEfGhIbrletiVzQ" name="MReminder">
-        <packagedElement xmi:type="uml:Class" xmi:id="_XQVEQEMQEfGhIbrletiVzQ" name="ReminderImpl">
+        <packagedElement xmi:type="uml:Class" xmi:id="_XQVEQEMQEfGhIbrletiVzQ" name="ReminderImpl" visibility="package">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_mUg1IEMQEfGhIbrletiVzQ" name="idReminder" visibility="protected">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_rJCUEEMQEfGhIbrletiVzQ" name="isDisabled" visibility="protected">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_vKk24EMQEfGhIbrletiVzQ" name="resendIntervalMin" visibility="protected">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_y4HfoEMQEfGhIbrletiVzQ" name="timeTrigger" visibility="protected">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y4HfoEMQEfGhIbrletiVzQ" name="hour" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_PoTBkE31EfGjp_15oaDZ5A" name="minute" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_j2JVQEMQEfGhIbrletiVzQ" client="_XQVEQEMQEfGhIbrletiVzQ" supplier="_ZQflMEMQEfGhIbrletiVzQ" contract="_ZQflMEMQEfGhIbrletiVzQ"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_ZQflMEMQEfGhIbrletiVzQ" name="Reminder"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_TNhWIEMQEfGhIbrletiVzQ" name="DReminderDelta">
+      <packagedElement xmi:type="uml:Package" xmi:id="_TNhWIEMQEfGhIbrletiVzQ" name="DInAppNotification">
         <packagedElement xmi:type="uml:Class" xmi:id="_WFwukEMQEfGhIbrletiVzQ" name="ReminderImpl">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_fnEsw0MQEfGhIbrletiVzQ" name="reminderimpl" type="_XQVEQEMQEfGhIbrletiVzQ" association="_fnEswEMQEfGhIbrletiVzQ"/>
         </packagedElement>
