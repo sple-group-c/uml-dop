@@ -110,9 +110,11 @@
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_brhSoEMPEfGhIbrletiVzQ" client="_LJDl4EMPEfGhIbrletiVzQ" supplier="_IZm9EEMPEfGhIbrletiVzQ" contract="_IZm9EEMPEfGhIbrletiVzQ"/>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_QlkR4EMPEfGhIbrletiVzQ" name="DMeetingDelta">
+      <packagedElement xmi:type="uml:Package" xmi:id="_QlkR4EMPEfGhIbrletiVzQ" name="DProjectMeetingDelta">
         <packagedElement xmi:type="uml:Class" xmi:id="_S33rsEMPEfGhIbrletiVzQ" name="MeetingManagementImpl">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_dEeCkkMPEfGhIbrletiVzQ" name="meetingmanagementimpl" type="_LJDl4EMPEfGhIbrletiVzQ" association="_dEdbgEMPEfGhIbrletiVzQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zvNbYFNFEfGdGc8aEGdmlA" name="project" visibility="protected" type="_GIeaMEMKEfGhIbrletiVzQ" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ALWL8lNGEfGdGc8aEGdmlA" name="Project" type="_GIeaMEMKEfGhIbrletiVzQ" association="_ALVk4FNGEfGdGc8aEGdmlA"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -184,6 +186,15 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_K6Fq4kMREfGhIbrletiVzQ" name="labelimpl" type="_HW0YcEMREfGhIbrletiVzQ" association="_K6EcwEMREfGhIbrletiVzQ"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ALVk4FNGEfGdGc8aEGdmlA" memberEnd="_ALWL8lNGEfGdGc8aEGdmlA _ALYoMFNGEfGdGc8aEGdmlA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ALWL8FNGEfGdGc8aEGdmlA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ALWL8VNGEfGdGc8aEGdmlA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ALYoMFNGEfGdGc8aEGdmlA" name="meetingmanagementimpl" type="_S33rsEMPEfGhIbrletiVzQ" association="_ALVk4FNGEfGdGc8aEGdmlA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dj2Y0FNGEfGdGc8aEGdmlA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DkD0MFNGEfGdGc8aEGdmlA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6IEHkEHxEfGVkPM0FobjkQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6IEuoEHxEfGVkPM0FobjkQ" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6IEuoUHxEfGVkPM0FobjkQ" key="Version" value="0.0.5"/>
@@ -234,4 +245,5 @@
   <umlvmprofile:pk xmi:id="_daICIEMSEfGhIbrletiVzQ" base_Property="_Y31_MEMREfGhIbrletiVzQ"/>
   <umlvmprofile:pk xmi:id="_fV-q0EMSEfGhIbrletiVzQ" base_Property="_mUg1IEMQEfGhIbrletiVzQ"/>
   <umlvmprofile:modifies xmi:id="_ppIVoEMSEfGhIbrletiVzQ" base_Association="_dEdbgEMPEfGhIbrletiVzQ"/>
+  <umlvmprofile:adds xmi:id="_cOGFAFNGEfGdGc8aEGdmlA" base_Property="_zvNbYFNFEfGdGc8aEGdmlA"/>
 </xmi:XMI>
