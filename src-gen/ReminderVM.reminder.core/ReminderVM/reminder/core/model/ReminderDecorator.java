@@ -46,12 +46,6 @@ public abstract class ReminderDecorator extends ReminderComponent{
 	public void setIsDisabled(boolean isDisabled) {
 		record.setIsDisabled(isDisabled);
 	}
-	public int getResendIntervalMin() {
-		return record.getResendIntervalMin();
-	}
-	public void setResendIntervalMin(int resendIntervalMin) {
-		record.setResendIntervalMin(resendIntervalMin);
-	}
 	public int getHour() {
 		return record.getHour();
 	}
@@ -63,6 +57,12 @@ public abstract class ReminderDecorator extends ReminderComponent{
 	}
 	public void setMinute(int minute) {
 		record.setMinute(minute);
+	}
+	public int getRemindingForId() {
+		return record.getRemindingForId();
+	}
+	public void setRemindingForId(int remindingForId) {
+		record.setRemindingForId(remindingForId);
 	}
 
 

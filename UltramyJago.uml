@@ -133,22 +133,30 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_rJCUEEMQEfGhIbrletiVzQ" name="isDisabled" visibility="protected">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_vKk24EMQEfGhIbrletiVzQ" name="resendIntervalMin" visibility="protected">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_y4HfoEMQEfGhIbrletiVzQ" name="hour" visibility="protected">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_PoTBkE31EfGjp_15oaDZ5A" name="minute" visibility="protected">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kSvK4FOIEfGQ-8j_E_-Z9A" name="remindingForId" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_j2JVQEMQEfGhIbrletiVzQ" client="_XQVEQEMQEfGhIbrletiVzQ" supplier="_ZQflMEMQEfGhIbrletiVzQ" contract="_ZQflMEMQEfGhIbrletiVzQ"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_ZQflMEMQEfGhIbrletiVzQ" name="Reminder"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_TNhWIEMQEfGhIbrletiVzQ" name="DInAppNotification">
+      <packagedElement xmi:type="uml:Package" xmi:id="_TNhWIEMQEfGhIbrletiVzQ" name="DEmailReminder">
         <packagedElement xmi:type="uml:Class" xmi:id="_WFwukEMQEfGhIbrletiVzQ" name="ReminderImpl">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_fnEsw0MQEfGhIbrletiVzQ" name="reminderimpl" type="_XQVEQEMQEfGhIbrletiVzQ" association="_fnEswEMQEfGhIbrletiVzQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_tsPQ4FOIEfGQ-8j_E_-Z9A" name="email" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_1olcYFOIEfGQ-8j_E_-Z9A" name="sendsEmail">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_F2XSkFOJEfGQ-8j_E_-Z9A" name="emailAddress">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -246,4 +254,6 @@
   <umlvmprofile:pk xmi:id="_fV-q0EMSEfGhIbrletiVzQ" base_Property="_mUg1IEMQEfGhIbrletiVzQ"/>
   <umlvmprofile:modifies xmi:id="_ppIVoEMSEfGhIbrletiVzQ" base_Association="_dEdbgEMPEfGhIbrletiVzQ"/>
   <umlvmprofile:adds xmi:id="_cOGFAFNGEfGdGc8aEGdmlA" base_Property="_zvNbYFNFEfGdGc8aEGdmlA"/>
+  <umlvmprofile:adds xmi:id="_xia4QFOIEfGQ-8j_E_-Z9A" base_Property="_tsPQ4FOIEfGQ-8j_E_-Z9A"/>
+  <umlvmprofile:adds xmi:id="_6lwhAFOIEfGQ-8j_E_-Z9A" base_Operation="_1olcYFOIEfGQ-8j_E_-Z9A"/>
 </xmi:XMI>

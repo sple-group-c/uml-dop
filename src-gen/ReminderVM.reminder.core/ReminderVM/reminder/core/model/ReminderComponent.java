@@ -18,9 +18,9 @@ public abstract class ReminderComponent implements Reminder{
 	@Id
 	protected int idReminder; 
 	protected boolean isDisabled;
-	protected int resendIntervalMin;
 	protected int hour;
 	protected int minute;
+	protected int remindingForId;
 	protected String objectName = ReminderComponent.class.getName();
 
 	public ReminderComponent() {
@@ -28,13 +28,13 @@ public abstract class ReminderComponent implements Reminder{
 	} 
 
 	public ReminderComponent(
-        int idReminder, boolean isDisabled, int resendIntervalMin, int hour, int minute
+        int idReminder, boolean isDisabled, int hour, int minute, int remindingForId
     ) {
         this.idReminder = idReminder;
         this.isDisabled = isDisabled;
-        this.resendIntervalMin = resendIntervalMin;
         this.hour = hour;
         this.minute = minute;
+        this.remindingForId = remindingForId;
     }
 
 	public int getIdReminder() {
@@ -51,13 +51,6 @@ public abstract class ReminderComponent implements Reminder{
 	public void setIsDisabled(boolean isDisabled) {
 		this.isDisabled = isDisabled;
 	}
-	public int getResendIntervalMin() {
-		return this.resendIntervalMin;
-	}
-
-	public void setResendIntervalMin(int resendIntervalMin) {
-		this.resendIntervalMin = resendIntervalMin;
-	}
 	public int getHour() {
 		return this.hour;
 	}
@@ -72,6 +65,13 @@ public abstract class ReminderComponent implements Reminder{
 	public void setMinute(int minute) {
 		this.minute = minute;
 	}
+	public int getRemindingForId() {
+		return this.remindingForId;
+	}
+
+	public void setRemindingForId(int remindingForId) {
+		this.remindingForId = remindingForId;
+	}
  
 
 	@Override
@@ -79,9 +79,9 @@ public abstract class ReminderComponent implements Reminder{
         return "{" +
             " idReminder='" + getIdReminder() + "'" +
             " isDisabled='" + getIsDisabled() + "'" +
-            " resendIntervalMin='" + getResendIntervalMin() + "'" +
             " hour='" + getHour() + "'" +
             " minute='" + getMinute() + "'" +
+            " remindingForId='" + getRemindingForId() + "'" +
             "}";
     }
 	
