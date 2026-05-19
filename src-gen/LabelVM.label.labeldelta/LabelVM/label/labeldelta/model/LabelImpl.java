@@ -21,7 +21,7 @@ public class LabelImpl extends LabelDecorator {
 	public LabelImpl() {
         super();
 		Random r = new Random();
-		this. = Math.abs(r.nextInt());
+		this.idLabel = Math.abs(r.nextInt());
         this.objectName = LabelImpl.class.getName();
     }
 

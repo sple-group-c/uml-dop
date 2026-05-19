@@ -20,7 +20,7 @@ public class BeritaBoardImpl extends BeritaBoardDecorator {
 	public BeritaBoardImpl() {
         super();
 		Random r = new Random();
-		this. = Math.abs(r.nextInt());
+		this.beritaid = Math.abs(r.nextInt());
         this.objectName = BeritaBoardImpl.class.getName();
     }
 

@@ -20,7 +20,7 @@ public class ProjectImpl extends ProjectDecorator {
 	public ProjectImpl() {
         super();
 		Random r = new Random();
-		this. = Math.abs(r.nextInt());
+		this.idProject = Math.abs(r.nextInt());
         this.objectName = ProjectImpl.class.getName();
     }
 

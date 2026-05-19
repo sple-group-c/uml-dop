@@ -20,7 +20,7 @@ public class TaskManagementImpl extends TaskManagementDecorator {
 	public TaskManagementImpl() {
         super();
 		Random r = new Random();
-		this. = Math.abs(r.nextInt());
+		this.idTask = Math.abs(r.nextInt());
         this.objectName = TaskManagementImpl.class.getName();
     }
 

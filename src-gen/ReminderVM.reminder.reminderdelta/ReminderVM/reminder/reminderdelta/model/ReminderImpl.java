@@ -20,7 +20,7 @@ public class ReminderImpl extends ReminderDecorator {
 	public ReminderImpl() {
         super();
 		Random r = new Random();
-		this. = Math.abs(r.nextInt());
+		this.idReminder = Math.abs(r.nextInt());
         this.objectName = ReminderImpl.class.getName();
     }
 

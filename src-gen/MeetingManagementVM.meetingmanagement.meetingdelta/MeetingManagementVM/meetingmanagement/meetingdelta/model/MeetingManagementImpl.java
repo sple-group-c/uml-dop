@@ -20,7 +20,7 @@ public class MeetingManagementImpl extends MeetingManagementDecorator {
 	public MeetingManagementImpl() {
         super();
 		Random r = new Random();
-		this. = Math.abs(r.nextInt());
+		this.idMeeting = Math.abs(r.nextInt());
         this.objectName = MeetingManagementImpl.class.getName();
     }
 
