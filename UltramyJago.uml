@@ -17,9 +17,12 @@
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yZCw8EHyEfGVkPM0FobjkQ" client="_QuLY0EHyEfGVkPM0FobjkQ" supplier="_KzaqkEHyEfGVkPM0FobjkQ" contract="_KzaqkEHyEfGVkPM0FobjkQ"/>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_HALZ8EIoEfGjcr_fAw5DGQ" name="DFansramy">
+      <packagedElement xmi:type="uml:Package" xmi:id="_HALZ8EIoEfGjcr_fAw5DGQ" name="DSubscription">
         <packagedElement xmi:type="uml:Class" xmi:id="_SrbgIEIoEfGjcr_fAw5DGQ" name="BeritaBoardImpl">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_e-FkkkIoEfGjcr_fAw5DGQ" name="beritaboardimpl" type="_QuLY0EHyEfGVkPM0FobjkQ" association="_e-EWcEIoEfGjcr_fAw5DGQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_s4YqsFOLEfGOn6IXmPZVRA" name="subscription" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedAttribute>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -110,11 +113,9 @@
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_brhSoEMPEfGhIbrletiVzQ" client="_LJDl4EMPEfGhIbrletiVzQ" supplier="_IZm9EEMPEfGhIbrletiVzQ" contract="_IZm9EEMPEfGhIbrletiVzQ"/>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_QlkR4EMPEfGhIbrletiVzQ" name="DProjectMeetingDelta">
+      <packagedElement xmi:type="uml:Package" xmi:id="_QlkR4EMPEfGhIbrletiVzQ" name="DMeetingDelta">
         <packagedElement xmi:type="uml:Class" xmi:id="_S33rsEMPEfGhIbrletiVzQ" name="MeetingManagementImpl">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_dEeCkkMPEfGhIbrletiVzQ" name="meetingmanagementimpl" type="_LJDl4EMPEfGhIbrletiVzQ" association="_dEdbgEMPEfGhIbrletiVzQ"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_zvNbYFNFEfGdGc8aEGdmlA" name="project" visibility="protected" type="_GIeaMEMKEfGhIbrletiVzQ" isUnique="false"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_ALWL8lNGEfGdGc8aEGdmlA" name="Project" type="_GIeaMEMKEfGhIbrletiVzQ" association="_ALVk4FNGEfGdGc8aEGdmlA"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -126,37 +127,26 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Nrep4EMQEfGhIbrletiVzQ" name="ReminderVM">
       <packagedElement xmi:type="uml:Package" xmi:id="_RC7G0EMQEfGhIbrletiVzQ" name="MReminder">
-        <packagedElement xmi:type="uml:Class" xmi:id="_XQVEQEMQEfGhIbrletiVzQ" name="ReminderImpl" visibility="package">
+        <packagedElement xmi:type="uml:Class" xmi:id="_XQVEQEMQEfGhIbrletiVzQ" name="ReminderImpl">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_mUg1IEMQEfGhIbrletiVzQ" name="idReminder" visibility="protected">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_rJCUEEMQEfGhIbrletiVzQ" name="isDisabled" visibility="protected">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_y4HfoEMQEfGhIbrletiVzQ" name="hour" visibility="protected">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_vKk24EMQEfGhIbrletiVzQ" name="resendIntervalMin" visibility="protected">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_PoTBkE31EfGjp_15oaDZ5A" name="minute" visibility="protected">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_kSvK4FOIEfGQ-8j_E_-Z9A" name="remindingForId" visibility="protected">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y4HfoEMQEfGhIbrletiVzQ" name="timeTrigger" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_j2JVQEMQEfGhIbrletiVzQ" client="_XQVEQEMQEfGhIbrletiVzQ" supplier="_ZQflMEMQEfGhIbrletiVzQ" contract="_ZQflMEMQEfGhIbrletiVzQ"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_ZQflMEMQEfGhIbrletiVzQ" name="Reminder"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_TNhWIEMQEfGhIbrletiVzQ" name="DEmailReminder">
+      <packagedElement xmi:type="uml:Package" xmi:id="_TNhWIEMQEfGhIbrletiVzQ" name="DReminderDelta">
         <packagedElement xmi:type="uml:Class" xmi:id="_WFwukEMQEfGhIbrletiVzQ" name="ReminderImpl">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_fnEsw0MQEfGhIbrletiVzQ" name="reminderimpl" type="_XQVEQEMQEfGhIbrletiVzQ" association="_fnEswEMQEfGhIbrletiVzQ"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_tsPQ4FOIEfGQ-8j_E_-Z9A" name="email" visibility="protected">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_1olcYFOIEfGQ-8j_E_-Z9A" name="sendsEmail">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_F2XSkFOJEfGQ-8j_E_-Z9A" name="emailAddress">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedParameter>
-          </ownedOperation>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -193,15 +183,6 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K6FD0UMREfGhIbrletiVzQ" key="nature" value="UML_Nature"/>
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_K6Fq4kMREfGhIbrletiVzQ" name="labelimpl" type="_HW0YcEMREfGhIbrletiVzQ" association="_K6EcwEMREfGhIbrletiVzQ"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_ALVk4FNGEfGdGc8aEGdmlA" memberEnd="_ALWL8lNGEfGdGc8aEGdmlA _ALYoMFNGEfGdGc8aEGdmlA">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ALWL8FNGEfGdGc8aEGdmlA" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ALWL8VNGEfGdGc8aEGdmlA" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_ALYoMFNGEfGdGc8aEGdmlA" name="meetingmanagementimpl" type="_S33rsEMPEfGhIbrletiVzQ" association="_ALVk4FNGEfGdGc8aEGdmlA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dj2Y0FNGEfGdGc8aEGdmlA"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DkD0MFNGEfGdGc8aEGdmlA" value="*"/>
-      </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6IEHkEHxEfGVkPM0FobjkQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6IEuoEHxEfGVkPM0FobjkQ" source="PapyrusVersion">
@@ -253,7 +234,5 @@
   <umlvmprofile:pk xmi:id="_daICIEMSEfGhIbrletiVzQ" base_Property="_Y31_MEMREfGhIbrletiVzQ"/>
   <umlvmprofile:pk xmi:id="_fV-q0EMSEfGhIbrletiVzQ" base_Property="_mUg1IEMQEfGhIbrletiVzQ"/>
   <umlvmprofile:modifies xmi:id="_ppIVoEMSEfGhIbrletiVzQ" base_Association="_dEdbgEMPEfGhIbrletiVzQ"/>
-  <umlvmprofile:adds xmi:id="_cOGFAFNGEfGdGc8aEGdmlA" base_Property="_zvNbYFNFEfGdGc8aEGdmlA"/>
-  <umlvmprofile:adds xmi:id="_xia4QFOIEfGQ-8j_E_-Z9A" base_Property="_tsPQ4FOIEfGQ-8j_E_-Z9A"/>
-  <umlvmprofile:adds xmi:id="_6lwhAFOIEfGQ-8j_E_-Z9A" base_Operation="_1olcYFOIEfGQ-8j_E_-Z9A"/>
+  <umlvmprofile:adds xmi:id="_1KtGMFOLEfGOn6IXmPZVRA" base_Property="_s4YqsFOLEfGOn6IXmPZVRA"/>
 </xmi:XMI>
