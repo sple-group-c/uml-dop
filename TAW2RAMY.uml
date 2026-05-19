@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmlns:umlvmprofile="pathmap://UML_PROFILES/uml-vm-profile.profile.uml" xsi:schemaLocation="pathmap://UML_PROFILES/uml-vm-profile.profile.uml pathmap://model/uml-vm-profile/uml-vm-profile.profile.uml#_XJZvsJOyEfCDfaGUJJSFbQ">
+  <uml:Model xmi:id="_JfcR4D_cEfG_EbYrkoLnzw" name="TAW2RAMY">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_JmkNkD_cEfG_EbYrkoLnzw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_w8NsQECiEfGjcr_fAw5DGQ" name="TaskManagementVM" visibility="package">
+      <packagedElement xmi:type="uml:Package" xmi:id="_p4AmIEBUEfG_EbYrkoLnzw" name="MTaskManagement">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_vqqhQEBUEfG_EbYrkoLnzw" name="TaskManagement"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_7igR8EBUEfG_EbYrkoLnzw" name="TaskManagementImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_MHV9QEBVEfG_EbYrkoLnzw" name="idTask" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iSr-EEBVEfG_EbYrkoLnzw" name="title" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ldjXkEBVEfG_EbYrkoLnzw" name="description" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_qi9yMEBVEfG_EbYrkoLnzw" name="status" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_D0VlQEBVEfG_EbYrkoLnzw" client="_7igR8EBUEfG_EbYrkoLnzw" supplier="_vqqhQEBUEfG_EbYrkoLnzw" contract="_vqqhQEBUEfG_EbYrkoLnzw"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_6Suh0EIlEfGjcr_fAw5DGQ" name="DCoba">
+        <packagedElement xmi:type="uml:Class" xmi:id="_KjyVgEImEfGjcr_fAw5DGQ" name="TaskManagementImpl">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_U95j8EImEfGjcr_fAw5DGQ" name="taskmanagementimpl" type="_7igR8EBUEfG_EbYrkoLnzw" association="_U9waAEImEfGjcr_fAw5DGQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_U-AYYFOPEfGZk5RJ05ZstQ" name="Deadline" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_U9waAEImEfGjcr_fAw5DGQ" memberEnd="_U95j8EImEfGjcr_fAw5DGQ _U-GYQEImEfGjcr_fAw5DGQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U93HsEImEfGjcr_fAw5DGQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_U93uwEImEfGjcr_fAw5DGQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_U-GYQEImEfGjcr_fAw5DGQ" name="taskmanagementimpl" type="_KjyVgEImEfGjcr_fAw5DGQ" association="_U9waAEImEfGjcr_fAw5DGQ"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_JkUx4D_cEfG_EbYrkoLnzw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jki0UD_cEfG_EbYrkoLnzw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jki0UT_cEfG_EbYrkoLnzw" key="Version" value="0.0.5"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jki0Uj_cEfG_EbYrkoLnzw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jki0Uz_cEfG_EbYrkoLnzw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jki0VD_cEfG_EbYrkoLnzw" key="Date" value="2025-09-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jki0VT_cEfG_EbYrkoLnzw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JkZDUD_cEfG_EbYrkoLnzw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://model/uml-vm-profile/uml-vm-profile.profile.uml#_XJZvsJOyEfCDfaGUJJSFbQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://model/uml-vm-profile/uml-vm-profile.profile.uml#_XI61gJkHEeyPP7xacetQkQ"/>
+    </profileApplication>
+  </uml:Model>
+  <umlvmprofile:module xmi:id="_1ciZQEBUEfG_EbYrkoLnzw" base_Package="_p4AmIEBUEfG_EbYrkoLnzw"/>
+  <umlvmprofile:vm xmi:id="_2SE9sECiEfGjcr_fAw5DGQ" base_Package="_w8NsQECiEfGjcr_fAw5DGQ"/>
+  <umlvmprofile:pk xmi:id="_cGqc4ECmEfGjcr_fAw5DGQ" base_Property="_MHV9QEBVEfG_EbYrkoLnzw"/>
+  <umlvmprofile:delta xmi:id="_CuOugEImEfGjcr_fAw5DGQ" base_Package="_6Suh0EIlEfGjcr_fAw5DGQ"/>
+  <umlvmprofile:modifiedClass xmi:id="_UIDhEEImEfGjcr_fAw5DGQ" base_Class="_KjyVgEImEfGjcr_fAw5DGQ"/>
+  <umlvmprofile:modifies xmi:id="_gxKWoEImEfGjcr_fAw5DGQ" base_Association="_U9waAEImEfGjcr_fAw5DGQ"/>
+  <umlvmprofile:adds xmi:id="_aAc-kFOPEfGZk5RJ05ZstQ" base_Property="_U-AYYFOPEfGZk5RJ05ZstQ"/>
+</xmi:XMI>
