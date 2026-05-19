@@ -18,27 +18,20 @@ public class TaskManagementServiceImpl extends TaskManagementServiceDecorator {
     }
 
  	public TaskManagement createTaskManagement(Map<String, Object> requestBody){
-		String idTaskStr = (String) requestBody.get("idTask");
-		int idTask = Integer.parseInt(idTaskStr);
 		String title = (String) requestBody.get("title");
 		String description = (String) requestBody.get("description");
 		String status = (String) requestBody.get("status");
 		TaskManagement taskmanagementtaskdelta = record.createTaskManagement(requestBody);
-		TaskManagement taskmanagementtaskdeltadeco = TaskManagementFactory.createTaskManagement("TaskManagementVM.taskmanagement.taskdelta", taskmanagementtaskdelta, idTask, title, description, status);
+		TaskManagement taskmanagementtaskdeltadeco = TaskManagementFactory.createTaskManagement("TaskManagementVM.taskmanagement.taskdelta.model.TaskManagementImpl", taskmanagementtaskdelta, );
 		Repository.saveObject(taskmanagementtaskdeltadeco);
 		return taskmanagementtaskdeltadeco;
 	}
 
 	public TaskManagement createTaskManagement(Map<String, Object> requestBody, int id){
 		TaskManagement savedTaskManagement = Repository.getObject(id);
-		String idTaskStr = (String) requestBody.get("idTask");
-		int idTask = Integer.parseInt(idTaskStr);
-		String title = (String) requestBody.get("title");
-		String description = (String) requestBody.get("description");
-		String status = (String) requestBody.get("status");
 		UUID recordTaskManagementIdTask = ((TaskManagementDecorator) savedTaskManagement).getIdTask();
-		TaskManagement TaskManagement = record.createTaskManagement(requestBody, recordTaskManagementIdTask);
-		TaskManagement taskmanagementtaskdelta = TaskManagementFactory.createTaskManagement("TaskManagementVM.taskmanagement.taskdelta.model.TaskManagementImpl", TaskManagement, idTask, title, description, status);
+		TaskManagement taskmanagement = record.createTaskManagement(requestBody, recordTaskManagementIdTask);
+		TaskManagement taskmanagementtaskdelta = TaskManagementFactory.createTaskManagement("TaskManagementVM.taskmanagement.taskdelta.TaskManagementImpl", taskmanagement, );
 		return taskmanagementtaskdelta;
 	}
 

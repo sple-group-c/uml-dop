@@ -14,11 +14,11 @@ import MeetingManagementVM.meetingmanagement.core.service.MeetingManagementServi
 import MeetingManagementVM.meetingmanagement.meetingdelta.service.MeetingManagementServiceImpl;
 
 public class MeetingManagementResourceImpl extends MeetingManagementResourceDecorator {
-	protected MeetingManagementServiceComponent recordComponent;
-	private MeetingManagementServiceImpl meetingmanagementmeetingdeltaServiceImpl = new MeetingManagementServiceImpl(recordComponent);
+	private MeetingManagementServiceComponent meetingmanagementmeetingdeltaServiceImpl;
 
-    public MeetingManagementResourceImpl (MeetingManagementResourceComponent record) {
+    public MeetingManagementResourceImpl (MeetingManagementResourceComponent record, MeetingManagementServiceComponent recordService) {
         super(record);
+		this.meetingmanagementmeetingdeltaServiceImpl = new MeetingManagementServiceImpl(recordService);
     }
 
     

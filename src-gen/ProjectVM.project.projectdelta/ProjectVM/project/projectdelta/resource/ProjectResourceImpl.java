@@ -14,11 +14,11 @@ import ProjectVM.project.core.service.ProjectServiceComponent;
 import ProjectVM.project.projectdelta.service.ProjectServiceImpl;
 
 public class ProjectResourceImpl extends ProjectResourceDecorator {
-	protected ProjectServiceComponent recordComponent;
-	private ProjectServiceImpl projectprojectdeltaServiceImpl = new ProjectServiceImpl(recordComponent);
+	private ProjectServiceComponent projectprojectdeltaServiceImpl;
 
-    public ProjectResourceImpl (ProjectResourceComponent record) {
+    public ProjectResourceImpl (ProjectResourceComponent record, ProjectServiceComponent recordService) {
         super(record);
+		this.projectprojectdeltaServiceImpl = new ProjectServiceImpl(recordService);
     }
 
     

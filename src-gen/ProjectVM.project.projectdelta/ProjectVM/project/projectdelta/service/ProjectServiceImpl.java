@@ -18,25 +18,19 @@ public class ProjectServiceImpl extends ProjectServiceDecorator {
     }
 
  	public Project createProject(Map<String, Object> requestBody){
-		String idProjectStr = (String) requestBody.get("idProject");
-		int idProject = Integer.parseInt(idProjectStr);
 		String name = (String) requestBody.get("name");
 		String description = (String) requestBody.get("description");
 		Project projectprojectdelta = record.createProject(requestBody);
-		Project projectprojectdeltadeco = ProjectFactory.createProject("ProjectVM.project.projectdelta", projectprojectdelta, idProject, name, description);
+		Project projectprojectdeltadeco = ProjectFactory.createProject("ProjectVM.project.projectdelta.model.ProjectImpl", projectprojectdelta, );
 		Repository.saveObject(projectprojectdeltadeco);
 		return projectprojectdeltadeco;
 	}
 
 	public Project createProject(Map<String, Object> requestBody, int id){
 		Project savedProject = Repository.getObject(id);
-		String idProjectStr = (String) requestBody.get("idProject");
-		int idProject = Integer.parseInt(idProjectStr);
-		String name = (String) requestBody.get("name");
-		String description = (String) requestBody.get("description");
 		UUID recordProjectIdProject = ((ProjectDecorator) savedProject).getIdProject();
-		Project Project = record.createProject(requestBody, recordProjectIdProject);
-		Project projectprojectdelta = ProjectFactory.createProject("ProjectVM.project.projectdelta.model.ProjectImpl", Project, idProject, name, description);
+		Project project = record.createProject(requestBody, recordProjectIdProject);
+		Project projectprojectdelta = ProjectFactory.createProject("ProjectVM.project.projectdelta.ProjectImpl", project, );
 		return projectprojectdelta;
 	}
 

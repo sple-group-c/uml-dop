@@ -18,29 +18,21 @@ public class MeetingManagementServiceImpl extends MeetingManagementServiceDecora
     }
 
  	public MeetingManagement createMeetingManagement(Map<String, Object> requestBody){
-		String idMeetingStr = (String) requestBody.get("idMeeting");
-		int idMeeting = Integer.parseInt(idMeetingStr);
 		String name = (String) requestBody.get("name");
 		String startDate = (String) requestBody.get("startDate");
 		String endDate = (String) requestBody.get("endDate");
 		String location = (String) requestBody.get("location");
 		MeetingManagement meetingmanagementmeetingdelta = record.createMeetingManagement(requestBody);
-		MeetingManagement meetingmanagementmeetingdeltadeco = MeetingManagementFactory.createMeetingManagement("MeetingManagementVM.meetingmanagement.meetingdelta", meetingmanagementmeetingdelta, idMeeting, name, startDate, endDate, location);
+		MeetingManagement meetingmanagementmeetingdeltadeco = MeetingManagementFactory.createMeetingManagement("MeetingManagementVM.meetingmanagement.meetingdelta.model.MeetingManagementImpl", meetingmanagementmeetingdelta, );
 		Repository.saveObject(meetingmanagementmeetingdeltadeco);
 		return meetingmanagementmeetingdeltadeco;
 	}
 
 	public MeetingManagement createMeetingManagement(Map<String, Object> requestBody, int id){
 		MeetingManagement savedMeetingManagement = Repository.getObject(id);
-		String idMeetingStr = (String) requestBody.get("idMeeting");
-		int idMeeting = Integer.parseInt(idMeetingStr);
-		String name = (String) requestBody.get("name");
-		String startDate = (String) requestBody.get("startDate");
-		String endDate = (String) requestBody.get("endDate");
-		String location = (String) requestBody.get("location");
 		UUID recordMeetingManagementIdMeeting = ((MeetingManagementDecorator) savedMeetingManagement).getIdMeeting();
-		MeetingManagement MeetingManagement = record.createMeetingManagement(requestBody, recordMeetingManagementIdMeeting);
-		MeetingManagement meetingmanagementmeetingdelta = MeetingManagementFactory.createMeetingManagement("MeetingManagementVM.meetingmanagement.meetingdelta.model.MeetingManagementImpl", MeetingManagement, idMeeting, name, startDate, endDate, location);
+		MeetingManagement meetingmanagement = record.createMeetingManagement(requestBody, recordMeetingManagementIdMeeting);
+		MeetingManagement meetingmanagementmeetingdelta = MeetingManagementFactory.createMeetingManagement("MeetingManagementVM.meetingmanagement.meetingdelta.MeetingManagementImpl", meetingmanagement, );
 		return meetingmanagementmeetingdelta;
 	}
 

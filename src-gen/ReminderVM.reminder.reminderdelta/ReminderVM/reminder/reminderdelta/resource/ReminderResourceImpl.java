@@ -14,11 +14,11 @@ import ReminderVM.reminder.core.service.ReminderServiceComponent;
 import ReminderVM.reminder.reminderdelta.service.ReminderServiceImpl;
 
 public class ReminderResourceImpl extends ReminderResourceDecorator {
-	protected ReminderServiceComponent recordComponent;
-	private ReminderServiceImpl reminderreminderdeltaServiceImpl = new ReminderServiceImpl(recordComponent);
+	private ReminderServiceComponent reminderreminderdeltaServiceImpl;
 
-    public ReminderResourceImpl (ReminderResourceComponent record) {
+    public ReminderResourceImpl (ReminderResourceComponent record, ReminderServiceComponent recordService) {
         super(record);
+		this.reminderreminderdeltaServiceImpl = new ReminderServiceImpl(recordService);
     }
 
     

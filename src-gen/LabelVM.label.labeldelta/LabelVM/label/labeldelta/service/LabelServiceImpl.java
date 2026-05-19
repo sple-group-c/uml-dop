@@ -18,25 +18,21 @@ public class LabelServiceImpl extends LabelServiceDecorator {
     }
 
  	public Label createLabel(Map<String, Object> requestBody){
-		String idLabelStr = (String) requestBody.get("idLabel");
-		int idLabel = Integer.parseInt(idLabelStr);
+		String color = (String) requestBody.get("color");
 		String name = (String) requestBody.get("name");
 		String description = (String) requestBody.get("description");
 		Label labellabeldelta = record.createLabel(requestBody);
-		Label labellabeldeltadeco = LabelFactory.createLabel("LabelVM.label.labeldelta", labellabeldelta, idLabel, name, description);
+		Label labellabeldeltadeco = LabelFactory.createLabel("LabelVM.label.labeldelta.model.LabelImpl", labellabeldelta, color);
 		Repository.saveObject(labellabeldeltadeco);
 		return labellabeldeltadeco;
 	}
 
 	public Label createLabel(Map<String, Object> requestBody, int id){
 		Label savedLabel = Repository.getObject(id);
-		String idLabelStr = (String) requestBody.get("idLabel");
-		int idLabel = Integer.parseInt(idLabelStr);
-		String name = (String) requestBody.get("name");
-		String description = (String) requestBody.get("description");
+		String color = (String) requestBody.get("color");
 		UUID recordLabelIdLabel = ((LabelDecorator) savedLabel).getIdLabel();
-		Label Label = record.createLabel(requestBody, recordLabelIdLabel);
-		Label labellabeldelta = LabelFactory.createLabel("LabelVM.label.labeldelta.model.LabelImpl", Label, idLabel, name, description);
+		Label label = record.createLabel(requestBody, recordLabelIdLabel);
+		Label labellabeldelta = LabelFactory.createLabel("LabelVM.label.labeldelta.LabelImpl", label, color);
 		return labellabeldelta;
 	}
 

@@ -170,8 +170,11 @@
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="__T_KcEMQEfGhIbrletiVzQ" name="DLabelDelta">
-        <packagedElement xmi:type="uml:Class" xmi:id="_HW0YcEMREfGhIbrletiVzQ" name="LabelImpl">
+        <packagedElement xmi:type="uml:Class" xmi:id="_HW0YcEMREfGhIbrletiVzQ" name="LabelImpl" visibility="package">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_K6FD0kMREfGhIbrletiVzQ" name="labelimpl" type="_GIjOgEMREfGhIbrletiVzQ" association="_K6EcwEMREfGhIbrletiVzQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_lG-WIFOGEfGTsJ5D5kjfOw" name="color" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -231,4 +234,5 @@
   <umlvmprofile:pk xmi:id="_daICIEMSEfGhIbrletiVzQ" base_Property="_Y31_MEMREfGhIbrletiVzQ"/>
   <umlvmprofile:pk xmi:id="_fV-q0EMSEfGhIbrletiVzQ" base_Property="_mUg1IEMQEfGhIbrletiVzQ"/>
   <umlvmprofile:modifies xmi:id="_ppIVoEMSEfGhIbrletiVzQ" base_Association="_dEdbgEMPEfGhIbrletiVzQ"/>
+  <umlvmprofile:adds xmi:id="_pWiRYFOHEfGTsJ5D5kjfOw" base_Property="_lG-WIFOGEfGTsJ5D5kjfOw"/>
 </xmi:XMI>

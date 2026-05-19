@@ -14,11 +14,11 @@ import LabelVM.label.core.service.LabelServiceComponent;
 import LabelVM.label.labeldelta.service.LabelServiceImpl;
 
 public class LabelResourceImpl extends LabelResourceDecorator {
-	protected LabelServiceComponent recordComponent;
-	private LabelServiceImpl labellabeldeltaServiceImpl = new LabelServiceImpl(recordComponent);
+	private LabelServiceComponent labellabeldeltaServiceImpl;
 
-    public LabelResourceImpl (LabelResourceComponent record) {
+    public LabelResourceImpl (LabelResourceComponent record, LabelServiceComponent recordService) {
         super(record);
+		this.labellabeldeltaServiceImpl = new LabelServiceImpl(recordService);
     }
 
     

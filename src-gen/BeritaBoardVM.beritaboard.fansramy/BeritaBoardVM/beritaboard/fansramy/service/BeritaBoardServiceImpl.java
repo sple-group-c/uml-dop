@@ -18,23 +18,18 @@ public class BeritaBoardServiceImpl extends BeritaBoardServiceDecorator {
     }
 
  	public BeritaBoard createBeritaBoard(Map<String, Object> requestBody){
-		String beritaidStr = (String) requestBody.get("beritaid");
-		int beritaid = Integer.parseInt(beritaidStr);
 		String content = (String) requestBody.get("content");
 		BeritaBoard beritaboardfansramy = record.createBeritaBoard(requestBody);
-		BeritaBoard beritaboardfansramydeco = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.fansramy", beritaboardfansramy, beritaid, content);
+		BeritaBoard beritaboardfansramydeco = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.fansramy.model.BeritaBoardImpl", beritaboardfansramy, );
 		Repository.saveObject(beritaboardfansramydeco);
 		return beritaboardfansramydeco;
 	}
 
 	public BeritaBoard createBeritaBoard(Map<String, Object> requestBody, int id){
 		BeritaBoard savedBeritaBoard = Repository.getObject(id);
-		String beritaidStr = (String) requestBody.get("beritaid");
-		int beritaid = Integer.parseInt(beritaidStr);
-		String content = (String) requestBody.get("content");
 		UUID recordBeritaBoardBeritaid = ((BeritaBoardDecorator) savedBeritaBoard).getBeritaid();
-		BeritaBoard BeritaBoard = record.createBeritaBoard(requestBody, recordBeritaBoardBeritaid);
-		BeritaBoard beritaboardfansramy = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.fansramy.model.BeritaBoardImpl", BeritaBoard, beritaid, content);
+		BeritaBoard beritaboard = record.createBeritaBoard(requestBody, recordBeritaBoardBeritaid);
+		BeritaBoard beritaboardfansramy = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.fansramy.BeritaBoardImpl", beritaboard, );
 		return beritaboardfansramy;
 	}
 

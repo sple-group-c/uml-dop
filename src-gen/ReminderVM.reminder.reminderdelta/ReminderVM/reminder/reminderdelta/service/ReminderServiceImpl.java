@@ -18,29 +18,21 @@ public class ReminderServiceImpl extends ReminderServiceDecorator {
     }
 
  	public Reminder createReminder(Map<String, Object> requestBody){
-		String idReminderStr = (String) requestBody.get("idReminder");
-		int idReminder = Integer.parseInt(idReminderStr);
 		String isDisabled = (String) requestBody.get("isDisabled");
 		String resendIntervalMinStr = (String) requestBody.get("resendIntervalMin");
 		int resendIntervalMin = Integer.parseInt(resendIntervalMinStr);
 		String timeTrigger = (String) requestBody.get("timeTrigger");
 		Reminder reminderreminderdelta = record.createReminder(requestBody);
-		Reminder reminderreminderdeltadeco = ReminderFactory.createReminder("ReminderVM.reminder.reminderdelta", reminderreminderdelta, idReminder, isDisabled, resendIntervalMin, timeTrigger);
+		Reminder reminderreminderdeltadeco = ReminderFactory.createReminder("ReminderVM.reminder.reminderdelta.model.ReminderImpl", reminderreminderdelta, );
 		Repository.saveObject(reminderreminderdeltadeco);
 		return reminderreminderdeltadeco;
 	}
 
 	public Reminder createReminder(Map<String, Object> requestBody, int id){
 		Reminder savedReminder = Repository.getObject(id);
-		String idReminderStr = (String) requestBody.get("idReminder");
-		int idReminder = Integer.parseInt(idReminderStr);
-		String isDisabled = (String) requestBody.get("isDisabled");
-		String resendIntervalMinStr = (String) requestBody.get("resendIntervalMin");
-		int resendIntervalMin = Integer.parseInt(resendIntervalMinStr);
-		String timeTrigger = (String) requestBody.get("timeTrigger");
 		UUID recordReminderIdReminder = ((ReminderDecorator) savedReminder).getIdReminder();
-		Reminder Reminder = record.createReminder(requestBody, recordReminderIdReminder);
-		Reminder reminderreminderdelta = ReminderFactory.createReminder("ReminderVM.reminder.reminderdelta.model.ReminderImpl", Reminder, idReminder, isDisabled, resendIntervalMin, timeTrigger);
+		Reminder reminder = record.createReminder(requestBody, recordReminderIdReminder);
+		Reminder reminderreminderdelta = ReminderFactory.createReminder("ReminderVM.reminder.reminderdelta.ReminderImpl", reminder, );
 		return reminderreminderdelta;
 	}
 

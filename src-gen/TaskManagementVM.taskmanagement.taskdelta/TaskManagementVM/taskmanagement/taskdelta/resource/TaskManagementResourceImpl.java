@@ -14,11 +14,11 @@ import TaskManagementVM.taskmanagement.core.service.TaskManagementServiceCompone
 import TaskManagementVM.taskmanagement.taskdelta.service.TaskManagementServiceImpl;
 
 public class TaskManagementResourceImpl extends TaskManagementResourceDecorator {
-	protected TaskManagementServiceComponent recordComponent;
-	private TaskManagementServiceImpl taskmanagementtaskdeltaServiceImpl = new TaskManagementServiceImpl(recordComponent);
+	private TaskManagementServiceComponent taskmanagementtaskdeltaServiceImpl;
 
-    public TaskManagementResourceImpl (TaskManagementResourceComponent record) {
+    public TaskManagementResourceImpl (TaskManagementResourceComponent record, TaskManagementServiceComponent recordService) {
         super(record);
+		this.taskmanagementtaskdeltaServiceImpl = new TaskManagementServiceImpl(recordService);
     }
 
     

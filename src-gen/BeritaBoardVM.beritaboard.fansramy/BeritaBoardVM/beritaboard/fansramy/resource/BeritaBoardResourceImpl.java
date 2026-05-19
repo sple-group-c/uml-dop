@@ -14,11 +14,11 @@ import BeritaBoardVM.beritaboard.core.service.BeritaBoardServiceComponent;
 import BeritaBoardVM.beritaboard.fansramy.service.BeritaBoardServiceImpl;
 
 public class BeritaBoardResourceImpl extends BeritaBoardResourceDecorator {
-	protected BeritaBoardServiceComponent recordComponent;
-	private BeritaBoardServiceImpl beritaboardfansramyServiceImpl = new BeritaBoardServiceImpl(recordComponent);
+	private BeritaBoardServiceComponent beritaboardfansramyServiceImpl;
 
-    public BeritaBoardResourceImpl (BeritaBoardResourceComponent record) {
+    public BeritaBoardResourceImpl (BeritaBoardResourceComponent record, BeritaBoardServiceComponent recordService) {
         super(record);
+		this.beritaboardfansramyServiceImpl = new BeritaBoardServiceImpl(recordService);
     }
 
     
