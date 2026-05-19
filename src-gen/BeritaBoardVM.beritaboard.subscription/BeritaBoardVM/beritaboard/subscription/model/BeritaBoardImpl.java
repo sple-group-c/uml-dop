@@ -1,4 +1,4 @@
-package BeritaBoardVM.beritaboard.fansramy.model;
+package BeritaBoardVM.beritaboard.subscription.model;
 
 import java.util.*;
 import java.lang.*;
@@ -13,10 +13,11 @@ import BeritaBoardVM.beritaboard.core.model.BeritaBoardDecorator;
 import BeritaBoardVM.beritaboard.core.model.BeritaBoard;
 import BeritaBoardVM.beritaboard.core.model.BeritaBoardComponent;
 
-@Entity(name="beritaboard_fansramy")
-@Table(name="beritaboard_fansramy")
+@Entity(name="beritaboard_subscription")
+@Table(name="beritaboard_subscription")
 public class BeritaBoardImpl extends BeritaBoardDecorator {
 
+	protected boolean subscription;
 	public BeritaBoardImpl() {
         super();
 		Random r = new Random();
@@ -24,16 +25,25 @@ public class BeritaBoardImpl extends BeritaBoardDecorator {
         this.objectName = BeritaBoardImpl.class.getName();
     }
 
-	public BeritaBoardImpl(BeritaBoardComponent record) {
+	public BeritaBoardImpl(BeritaBoardComponent record, boolean subscription) {
 		super(record, BeritaBoardImpl.class.getName());
+		this.subscription = subscription;
 		this.objectName = BeritaBoardImpl.class.getName();
 	}
 
+	public boolean getSubscription() {
+		return this.subscription;
+	}
+
+	public void setSubscription(boolean subscription) {
+		this.subscription = subscription;
+	}
 
 
 	public HashMap<String, Object> toHashMap() {
         HashMap<String, Object> map = record.toHashMap();
         map.put("beritaid", beritaid);
+		map.put("subscription", getSubscription());
 
         return map;
     }

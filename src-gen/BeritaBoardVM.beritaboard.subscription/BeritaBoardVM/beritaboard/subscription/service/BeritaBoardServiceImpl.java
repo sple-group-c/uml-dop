@@ -1,4 +1,4 @@
-package BeritaBoardVM.beritaboard.fansramy.service;
+package BeritaBoardVM.beritaboard.subscription.service;
 
 import java.util.*;
 import java.lang.*;
@@ -18,44 +18,46 @@ public class BeritaBoardServiceImpl extends BeritaBoardServiceDecorator {
     }
 
  	public BeritaBoard createBeritaBoard(Map<String, Object> requestBody){
+		boolean subscription = (boolean) requestBody.get("subscription");
 		String beritaidStr = (String) requestBody.get("beritaid");
 		int beritaid = Integer.parseInt(beritaidStr);
 		String content = (String) requestBody.get("content");
-		BeritaBoard beritaboardfansramy = record.createBeritaBoard(requestBody);
-		BeritaBoard beritaboardfansramydeco = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.fansramy", beritaboardfansramy, beritaid, content);
-		Repository.saveObject(beritaboardfansramydeco);
-		return beritaboardfansramydeco;
+		BeritaBoard beritaboardsubscription = record.createBeritaBoard(requestBody);
+		BeritaBoard beritaboardsubscriptiondeco = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.subscription", beritaboardsubscription, beritaid, content, subscription);
+		Repository.saveObject(beritaboardsubscriptiondeco);
+		return beritaboardsubscriptiondeco;
 	}
 
 	public BeritaBoard createBeritaBoard(Map<String, Object> requestBody, int id){
 		BeritaBoard savedBeritaBoard = Repository.getObject(id);
+		boolean subscription = (boolean) requestBody.get("subscription");
 		String beritaidStr = (String) requestBody.get("beritaid");
 		int beritaid = Integer.parseInt(beritaidStr);
 		String content = (String) requestBody.get("content");
 		UUID recordBeritaBoardBeritaid = ((BeritaBoardDecorator) savedBeritaBoard).getBeritaid();
 		BeritaBoard BeritaBoard = record.createBeritaBoard(requestBody, recordBeritaBoardBeritaid);
-		BeritaBoard beritaboardfansramy = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.fansramy.model.BeritaBoardImpl", BeritaBoard, beritaid, content);
-		return beritaboardfansramy;
+		BeritaBoard beritaboardsubscription = BeritaBoardFactory.createBeritaBoard("BeritaBoardVM.beritaboard.subscription.model.BeritaBoardImpl", BeritaBoard, beritaid, content, subscription);
+		return beritaboardsubscription;
 	}
 
     public HashMap<String, Object> updateBeritaBoard(Map<String, Object> requestBody){
 		String idStr = (String) requestBody.get("beritaid");
 		
-		BeritaBoard beritaboardfansramy = Repository.getObject(id);
-		beritaboardfansramy = createBeritaBoard(requestBody, id);
+		BeritaBoard beritaboardsubscription = Repository.getObject(id);
+		beritaboardsubscription = createBeritaBoard(requestBody, id);
 		
-		Repository.updateObject(beritaboardfansramy);
-		beritaboardfansramy = Repository.getObject(id);
+		Repository.updateObject(beritaboardsubscription);
+		beritaboardsubscription = Repository.getObject(id);
 		
 		//to do: fix association attributes
 		
-		return beritaboardfansramy.toHashMap();
+		return beritaboardsubscription.toHashMap();
 	}
 
 	public HashMap<String, Object> getBeritaBoard(String idStr){
 		int id = Integer.parseInt(idStr);
-		BeritaBoard beritaboardfansramy = Repository.getObject(id);
-		return beritaboardfansramy.toHashMap();
+		BeritaBoard beritaboardsubscription = Repository.getObject(id);
+		return beritaboardsubscription.toHashMap();
 	}
 
 	public HashMap<String, Object> getBeritaBoardById(int id){
@@ -70,7 +72,7 @@ public class BeritaBoardServiceImpl extends BeritaBoardServiceDecorator {
 	}
 
     public List<HashMap<String,Object>> getAllBeritaBoard(){
-		List<BeritaBoard> List = Repository.getAllObject("beritaboard_fansramy");
+		List<BeritaBoard> List = Repository.getAllObject("beritaboard_subscription");
 		return transformListToHashMap(List);
 	}
 

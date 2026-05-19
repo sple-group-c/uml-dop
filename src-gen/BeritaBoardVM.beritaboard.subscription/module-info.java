@@ -1,8 +1,8 @@
-module BeritaBoardVM.beritaboard.fansramy {
+module BeritaBoardVM.beritaboard.subscription {
 	requires BeritaBoardVM.beritaboard.core;
-	exports BeritaBoardVM.beritaboard.fansramy.model;
-	exports BeritaBoardVM.beritaboard.fansramy.resource;
-	exports BeritaBoardVM.beritaboard.fansramy.service;
+	exports BeritaBoardVM.beritaboard.subscription.model;
+	exports BeritaBoardVM.beritaboard.subscription.resource;
+	exports BeritaBoardVM.beritaboard.subscription.service;
 
 	requires id.ac.ui.cs.prices.winvmj.core;
 	requires id.ac.ui.cs.prices.winvmj.hibernate;
@@ -12,5 +12,5 @@ module BeritaBoardVM.beritaboard.fansramy {
 	requires java.naming;
 	requires java.net.http;
 
-	opens BeritaBoardVM.beritaboard.fansramy.model to org.hibernate.orm.core, gson, id.ac.ui.cs.prices.winvmj.hibernate;
+	opens BeritaBoardVM.beritaboard.subscription.model to org.hibernate.orm.core, gson, id.ac.ui.cs.prices.winvmj.hibernate;
 }

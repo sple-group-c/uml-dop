@@ -1,4 +1,4 @@
-package BeritaBoardVM.beritaboard.fansramy.resource;
+package BeritaBoardVM.beritaboard.subscription.resource;
 import java.util.*;
 import java.lang.*;
 
@@ -11,30 +11,30 @@ import BeritaBoardVM.beritaboard.core.resource.BeritaBoardResourceComponent;
 import BeritaBoardVM.beritaboard.core.model.BeritaBoard;
 import BeritaBoardVM.beritaboard.core.model.BeritaBoardImpl;
 import BeritaBoardVM.beritaboard.core.service.BeritaBoardServiceComponent;
-import BeritaBoardVM.beritaboard.fansramy.service.BeritaBoardServiceImpl;
+import BeritaBoardVM.beritaboard.subscription.service.BeritaBoardServiceImpl;
 
 public class BeritaBoardResourceImpl extends BeritaBoardResourceDecorator {
 	protected BeritaBoardServiceComponent recordComponent;
-	private BeritaBoardServiceImpl beritaboardfansramyServiceImpl = new BeritaBoardServiceImpl(recordComponent);
+	private BeritaBoardServiceImpl beritaboardsubscriptionServiceImpl = new BeritaBoardServiceImpl(recordComponent);
 
     public BeritaBoardResourceImpl (BeritaBoardResourceComponent record) {
         super(record);
     }
 
     
-    @Route(url="call/fansramy/save")
+    @Route(url="call/subscription/save")
     public List<HashMap<String,Object>> saveBeritaBoard(VMJExchange vmjExchange){
 		if (vmjExchange.getHttpMethod().equals("OPTIONS")) {
 			return null;
 		}
-		BeritaBoard beritaboardfansramy = createBeritaBoard(vmjExchange);
+		BeritaBoard beritaboardsubscription = createBeritaBoard(vmjExchange);
 		return getAllBeritaBoard(vmjExchange);
 	}
 
     public BeritaBoard createBeritaBoard(VMJExchange vmjExchange){
 		if (vmjExchange.getHttpMethod().equals("POST")) {
 		    Map<String, Object> requestBody = vmjExchange.getPayload(); 
-			BeritaBoard result = beritaboardfansramyServiceImpl.createBeritaBoard(requestBody);
+			BeritaBoard result = beritaboardsubscriptionServiceImpl.createBeritaBoard(requestBody);
 			return result;
 		}
 		throw new NotFoundException("Route tidak ditemukan");
@@ -43,53 +43,53 @@ public class BeritaBoardResourceImpl extends BeritaBoardResourceDecorator {
     public BeritaBoard createBeritaBoard(VMJExchange vmjExchange, UUID id){
 		if (vmjExchange.getHttpMethod().equals("POST")) {
 		    Map<String, Object> requestBody = vmjExchange.getPayload(); 
-			BeritaBoard result = beritaboardfansramyServiceImpl.createBeritaBoard(requestBody, id);
+			BeritaBoard result = beritaboardsubscriptionServiceImpl.createBeritaBoard(requestBody, id);
 			return result;
 		}
 		throw new NotFoundException("Route tidak ditemukan");
 	}
 
 	
-    @Route(url="call/fansramy/update")
+    @Route(url="call/subscription/update")
     public HashMap<String, Object> updateBeritaBoard(VMJExchange vmjExchange){
 		Map<String, Object> requestBody = vmjExchange.getPayload(); 
 		if (vmjExchange.getHttpMethod().equals("OPTIONS")){
 			return null;
 		}
-		return beritaboardfansramyServiceImpl.updateBeritaBoard(requestBody);
+		return beritaboardsubscriptionServiceImpl.updateBeritaBoard(requestBody);
 	}
 
 	
-    @Route(url="call/fansramy/detail")
+    @Route(url="call/subscription/detail")
     public HashMap<String, Object> getBeritaBoard(VMJExchange vmjExchange){
 		return record.getBeritaBoard(vmjExchange);
 	}
 
 	
-    @Route(url="call/fansramy/list")
+    @Route(url="call/subscription/list")
     public List<HashMap<String,Object>> getAllBeritaBoard(VMJExchange vmjExchange){
 		Map<String, Object> requestBody = vmjExchange.getPayload();
-		return beritaboardfansramyServiceImpl.getAllBeritaBoard();
+		return beritaboardsubscriptionServiceImpl.getAllBeritaBoard();
 	}
 
-    public List<HashMap<String,Object>> transformBeritaBoardListToHashMap(List<BeritaBoard> BeritaBoardFansramyList){
+    public List<HashMap<String,Object>> transformBeritaBoardListToHashMap(List<BeritaBoard> BeritaBoardSubscriptionList){
 		List<HashMap<String,Object>> resultList = new ArrayList<HashMap<String,Object>>();
-        for(int i = 0; i < BeritaBoardFansramyList.size(); i++) {
-            resultList.add(BeritaBoardFansramyList.get(i).toHashMap());
+        for(int i = 0; i < BeritaBoardSubscriptionList.size(); i++) {
+            resultList.add(BeritaBoardSubscriptionList.get(i).toHashMap());
         }
 
         return resultList;
 	}
 
 	
-    @Route(url="call/fansramy/delete")
+    @Route(url="call/subscription/delete")
     public List<HashMap<String,Object>> deleteBeritaBoard(VMJExchange vmjExchange){
 		Map<String, Object> requestBody = vmjExchange.getPayload(); 
 		if (vmjExchange.getHttpMethod().equals("OPTIONS")) {
 			return null;
 		}
 		
-		return beritaboardfansramyServiceImpl.deleteBeritaBoard(requestBody);
+		return beritaboardsubscriptionServiceImpl.deleteBeritaBoard(requestBody);
 	}
 
 	
