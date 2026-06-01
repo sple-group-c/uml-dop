@@ -14,11 +14,11 @@ import ReminderVM.reminder.core.service.ReminderServiceComponent;
 import ReminderVM.reminder.emailreminder.service.ReminderServiceImpl;
 
 public class ReminderResourceImpl extends ReminderResourceDecorator {
-	private ReminderServiceComponent reminderemailreminderServiceImpl;
+	protected ReminderServiceComponent recordComponent;
+	private ReminderServiceImpl reminderemailreminderServiceImpl = new ReminderServiceImpl(recordComponent);
 
-    public ReminderResourceImpl (ReminderResourceComponent record, ReminderServiceComponent recordService) {
+    public ReminderResourceImpl (ReminderResourceComponent record) {
         super(record);
-		this.reminderemailreminderServiceImpl = new ReminderServiceImpl(recordService);
     }
 
     
@@ -40,7 +40,7 @@ public class ReminderResourceImpl extends ReminderResourceDecorator {
 		throw new NotFoundException("Route tidak ditemukan");
 	}
 
-    public Reminder createReminder(VMJExchange vmjExchange, int id){
+    public Reminder createReminder(VMJExchange vmjExchange, UUID id){
 		if (vmjExchange.getHttpMethod().equals("POST")) {
 		    Map<String, Object> requestBody = vmjExchange.getPayload(); 
 			Reminder result = reminderemailreminderServiceImpl.createReminder(requestBody, id);

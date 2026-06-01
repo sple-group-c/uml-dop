@@ -59,7 +59,7 @@ public class ReminderServiceImpl extends ReminderServiceComponent{
 		int id = Integer.parseInt(idStr);
 		Reminder reminder = Repository.getObject(id);
 		
-		reminder.setIsDisabled((boolean) requestBody.get("isDisabled"));
+		reminder.setIsDisabled((String) requestBody.get("isDisabled"));
 		String hourStr = (String) requestBody.get("hour");
 		reminder.setHour(Integer.parseInt(hourStr));
 		
